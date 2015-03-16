@@ -21,7 +21,10 @@ Ext.define('MicroEvents.view.Main', {
                     xtype: 'titlebar',
                     title: 'Around Me',
                     items : [
-                        
+                        {
+                            xtype : 'button',
+                            text : 'Add'
+                        }
                     ]
                 }
             },
