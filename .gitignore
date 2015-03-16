@@ -1,0 +1,10 @@
+bootstrap.js
+bootstrap.json
+build/
+build.xml
+packages/
+touch/
+.sencha/
+.DS_Store
+**~
+#*
