@@ -8,6 +8,7 @@ How To Set Up This Project
 
 1. Navigate to your Webserver Folder: 
 On the Mac -- Library/WebServer/Documents/
+On Windows -- c:\wamp\www\
 
 2. Unzip and put the Sencha Touch Framework file you downloaded here (http://www.sencha.com/products/touch/). Also install Sencha Cmd (if you haven't already).
 
