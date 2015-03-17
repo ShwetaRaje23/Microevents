@@ -6,7 +6,7 @@ MicroEvents Web Mobile application for GaTech CIC Spring 2015
 How To Set Up This Project 
 ===========
 
-1. Navigate to your Webserver Folder: 
+1. Navigate to your Webserver Folder and Use Cmc+I to give yourself Read/Write permission for the folder: 
 On the Mac -- Library/WebServer/Documents/
 
 2. Unzip and put the Sencha Touch Framework file you downloaded here (http://www.sencha.com/products/touch/). Also install Sencha Cmd (if you haven't already).
