@@ -50,8 +50,9 @@ Ext.define('MicroEvents.view.Login', {
                     },
                     {
                         xtype : 'button',
+                        action : 'register',
                         flex : 1,
-                        text : '<font size=2>Not a member? Sign Up</font>',
+                        text : '<font size=2>Not a member? Register now!</font>',
                         ui : 'plain'
                     },
                 ]

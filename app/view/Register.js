@@ -31,6 +31,16 @@ Ext.define('MicroEvents.view.Register', {
                 width : '95%',
                 items: [
                     {
+                        xtype : 'textfield',
+                        name : 'fname',
+                        label : 'First Name'
+                    },
+                    {
+                        xtype : 'textfield',
+                        name : 'lname',
+                        label : 'Last Name'
+                    },
+                    {
                         xtype: 'emailfield',
                         name: 'email',
                         label: 'Email'
@@ -42,8 +52,8 @@ Ext.define('MicroEvents.view.Register', {
                     },
                     {
                         xtype : 'button',
-                        text : 'Login',
-                        action: 'login',
+                        text : 'Register',
+                        action: 'register',
                         flex : 1,
                         height : 40,
                         ui : 'confirm'
