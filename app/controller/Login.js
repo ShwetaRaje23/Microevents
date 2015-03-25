@@ -3,11 +3,15 @@ Ext.define('MicroEvents.controller.Login', {
     
     config: {
         refs: {
-            loginButton : 'login button[action=login]'
+            loginButton : 'login button[action=login]',
+            registerButton : 'login button[action=register]'
         },
         control: {
             loginButton: {
                 tap: 'doLogin'
+            },
+            registerButton: {
+                tap : 'doRegister'
             }
         }
     },
@@ -21,7 +25,20 @@ Ext.define('MicroEvents.controller.Login', {
             direction:'right'
         });
 
-        Ext.getCmp('start').setActiveItem(1, {type : 'slide', direction:'right'});
+        Ext.getCmp('start').setActiveItem(2, {type : 'slide', direction:'right'});
+
+    },
+
+    doRegister: function(){
+
+        Ext.getCmp('start').getLayout().setAnimation({
+            type: 'slide',
+            duration: 300,
+            reverse: true,
+            direction:'left'
+        });
+
+        Ext.getCmp('start').setActiveItem(1, {type : 'slide', direction:'left'});
 
     },
     

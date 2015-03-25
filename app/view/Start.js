@@ -14,6 +14,9 @@ Ext.define('MicroEvents.view.Start', {
                 xtype : 'login'
             },
             {
+                xtype : 'register'
+            },
+            {
                 xtype : 'main'
             }
         ]

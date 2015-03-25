@@ -22,7 +22,7 @@ Ext.application({
     ],
 
     views: [
-        'Start', 'Main', 'Login'
+        'Start', 'Main', 'Login', 'Register'
     ],
 
     icon: {

@@ -3,6 +3,7 @@ MicroEvents
 
 MicroEvents Web Mobile application for GaTech CIC Spring 2015
 
+
 How To Set Up This Project 
 ===========
 
