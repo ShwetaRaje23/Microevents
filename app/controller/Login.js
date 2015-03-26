@@ -1,3 +1,5 @@
+var defaultUser = "Sasha"
+
 Ext.define('MicroEvents.controller.Login', {
     extend: 'Ext.app.Controller',
     

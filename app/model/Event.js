@@ -5,11 +5,12 @@ Ext.define('MicroEvents.model.Event', {
         fields: [
             { name: 'eid', type: 'auto' },
             { name: 'title', type: 'auto' },
-            { name: 'date', type: 'auto' },
             { name: 'venue', type: 'auto' },
+            { name: 'date', type: 'auto' },
             { name: 'time', type: 'auto' },
             { name: 'owner_id', type: 'auto' },
-            { name: 'circle_id', type: 'auto' }
+            { name: 'circle_id', type: 'auto' },
+            { name: 'is_closed', type: 'boolean' }
         ]
     }
 });
