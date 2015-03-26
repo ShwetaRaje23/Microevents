@@ -18,7 +18,7 @@ Ext.application({
     ],
 
     controllers: [
-        'Login'
+        'Login', 'Register'
     ],
 
     views: [

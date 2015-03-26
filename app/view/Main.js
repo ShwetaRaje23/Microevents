@@ -23,7 +23,8 @@ Ext.define('MicroEvents.view.Main', {
                     items : [
                         {
                             xtype : 'button',
-                            text : 'Add'
+                            text : 'Add',
+                            iconCls : 'add'
                         }
                     ]
                 }
