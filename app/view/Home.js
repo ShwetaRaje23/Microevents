@@ -6,17 +6,14 @@ Ext.define('MicroEvents.view.Home', {
 
     ],
     config: {
-        fullscreen: true,
         layout : 'card',
-
         title: 'Home',
         iconCls: 'home',
 
         styleHtmlContent: true,
         scrollable: true,
 
-        items: 
-        [
+        items: [
             {
                 docked: 'top',
                 xtype: 'titlebar',

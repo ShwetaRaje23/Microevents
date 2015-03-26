@@ -6,21 +6,19 @@ Ext.define('MicroEvents.view.MyEvents', {
 
     ],
     config: {
-        fullscreen: true,
         layout : 'card',
-
         title: 'My Events',
-                iconCls: 'user',
+        iconCls: 'user',
 
-                styleHtmlContent: true,
-                scrollable: true,
+        styleHtmlContent: true,
+        scrollable: true,
 
-                items: [
-                    {
-                        docked: 'top',
-                        xtype: 'titlebar',
-                        title: 'My Events'
-                    }
-                ]
+        items: [
+            {
+                docked: 'top',
+                xtype: 'titlebar',
+                title: 'My Events'
+            }
+        ]
     }
 });

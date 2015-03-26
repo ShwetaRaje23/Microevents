@@ -6,21 +6,18 @@ Ext.define('MicroEvents.view.Settings', {
 
     ],
     config: {
-        fullscreen: true,
         layout : 'card',
-
         title: 'Settings',
-                iconCls: 'settings',
+        iconCls: 'settings',
+        styleHtmlContent: true,
+        scrollable: true,
 
-                styleHtmlContent: true,
-                scrollable: true,
-
-                items: [
-                    {
-                        docked: 'top',
-                        xtype: 'titlebar',
-                        title: 'Settings'
-                    }
-                ]
+        items: [
+            {
+                docked: 'top',
+                xtype: 'titlebar',
+                title: 'Settings'
+            }
+        ]
     }
 });
