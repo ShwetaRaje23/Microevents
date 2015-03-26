@@ -1,6 +1,6 @@
-Ext.define('MicroEvents.view.Login', {
+Ext.define('MicroEvents.view.Register', {
     extend: 'Ext.Panel',
-    xtype: 'login',
+    xtype: 'register',
     requires: [
         'Ext.TitleBar',
         'Ext.form.Panel',
@@ -31,6 +31,16 @@ Ext.define('MicroEvents.view.Login', {
                 width : '95%',
                 items: [
                     {
+                        xtype : 'textfield',
+                        name : 'fname',
+                        label : 'First Name'
+                    },
+                    {
+                        xtype : 'textfield',
+                        name : 'lname',
+                        label : 'Last Name'
+                    },
+                    {
                         xtype: 'emailfield',
                         name: 'email',
                         label: 'Email'
@@ -42,17 +52,16 @@ Ext.define('MicroEvents.view.Login', {
                     },
                     {
                         xtype : 'button',
-                        text : 'Login',
-                        action: 'login',
+                        text : 'Register',
+                        action: 'register',
                         flex : 1,
                         height : 40,
                         ui : 'confirm'
                     },
                     {
                         xtype : 'button',
-                        action : 'register',
                         flex : 1,
-                        text : '<font size=2>Not a member? Register now!</font>',
+                        text : '<font size=2>Not a member? Sign Up</font>',
                         ui : 'plain'
                     },
                 ]

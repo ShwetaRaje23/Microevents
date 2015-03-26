@@ -10,49 +10,13 @@ Ext.define('MicroEvents.view.Main', {
 
         items: [
             {
-                title: 'Home',
-                iconCls: 'home',
-
-                styleHtmlContent: true,
-                scrollable: true,
-
-                items: {
-                    docked: 'top',
-                    xtype: 'titlebar',
-                    title: 'Around Me',
-                    items : [
-                        {
-                            xtype : 'button',
-                            text : 'Add'
-                        }
-                    ]
-                }
+                xtype: 'home'
             },
             {
-                title: 'My Events',
-                iconCls: 'user',
-
-                styleHtmlContent: true,
-                scrollable: true,
-
-                items: {
-                    docked: 'top',
-                    xtype: 'titlebar',
-                    title: 'My Events'
-                }
+                xtype: 'myevents'
             },
             {
-                title: 'Settings',
-                iconCls: 'settings',
-
-                styleHtmlContent: true,
-                scrollable: true,
-
-                items: {
-                    docked: 'top',
-                    xtype: 'titlebar',
-                    title: 'Settings'
-                }
+                xtype: 'settings'
             }
         ]
     }

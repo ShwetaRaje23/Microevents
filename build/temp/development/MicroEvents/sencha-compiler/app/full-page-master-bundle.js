@@ -1,2 +1,2 @@
 // @tag full-page
-// @require /Users/sasha/.Trash/MicroEvents1/app.js
+// @require /Library/WebServer/Documents/MicroEvents/app.js
