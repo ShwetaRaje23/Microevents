@@ -57,13 +57,7 @@ Ext.define('MicroEvents.view.Register', {
                         flex : 1,
                         height : 40,
                         ui : 'confirm'
-                    },
-                    {
-                        xtype : 'button',
-                        flex : 1,
-                        text : '<font size=2>Not a member? Sign Up</font>',
-                        ui : 'plain'
-                    },
+                    }
                 ]
             },
             {
