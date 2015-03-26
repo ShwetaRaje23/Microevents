@@ -669,6 +669,8 @@ Ext.ClassManager.addNameAlternateMappings({
   ],
   "MicroEvents.controller.Login": [],
   "MicroEvents.controller.Register": [],
+  "MicroEvents.model.Event": [],
+  "MicroEvents.store.Events": [],
   "MicroEvents.view.Home": [],
   "MicroEvents.view.Login": [],
   "MicroEvents.view.Main": [],
@@ -1409,6 +1411,8 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.WindowsPhone": [],
   "MicroEvents.controller.Login": [],
   "MicroEvents.controller.Register": [],
+  "MicroEvents.model.Event": [],
+  "MicroEvents.store.Events": [],
   "MicroEvents.view.Home": [
     "widget.home"
   ],

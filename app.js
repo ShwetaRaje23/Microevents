@@ -17,6 +17,14 @@ Ext.application({
         'Ext.MessageBox'
     ],
 
+    models : [
+        'Event'
+    ],
+
+    stores : [ 
+        'Events'
+    ],
+
     controllers: [
         'Login', 'Register'
     ],

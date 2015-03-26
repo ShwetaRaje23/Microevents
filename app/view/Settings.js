@@ -11,7 +11,6 @@ Ext.define('MicroEvents.view.Settings', {
         iconCls: 'settings',
         styleHtmlContent: true,
         scrollable: true,
-
         items: [
             {
                 docked: 'top',
