@@ -18,11 +18,20 @@ Ext.application({
     ],
 
     models : [
+<<<<<<< HEAD
+        'Event', 'Settings'
+        
+    ],
+
+    stores : [ 
+        'Events', 'Settings'
+=======
         'Event'
     ],
 
     stores : [ 
         'Events'
+>>>>>>> 9cba0a77745d51c7eb5e55c56c18ee62ec0920f3
     ],
 
     controllers: [
