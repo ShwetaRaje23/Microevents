@@ -6,10 +6,10 @@ Ext.define('MicroEvents.view.MyEvents', {
         'Ext.dataview.List'
     ],
     config: {
-        layout : 'card',
         title: 'My Events',
         iconCls: 'user',
-        styleHtmlContent: true,
+        // styleHtmlContent: true,
+        
         items: [
             {
                 docked: 'top',
@@ -18,6 +18,8 @@ Ext.define('MicroEvents.view.MyEvents', {
             },
             {
                 xtype : 'list',
+                height : '100%',
+                width: '100%',
                 store : 'Events',
                 itemTpl : '{title}'
             }

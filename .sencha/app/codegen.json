@@ -328,6 +328,17 @@
         "controllerNamespace": "MicroEvents.controller",
         "name": "Main"
       }
+    },
+    "app/controller/MyEvents.js": {
+      "source": "{controllerFileName}.js.tpl.merge",
+      "version": "7cd8d1cf12515ca525732931d6b775e3f7924ad9",
+      "parameters": {
+        "appName": "MicroEvents",
+        "controllerFileName": "MyEvents",
+        "controllerName": "MyEvents",
+        "controllerNamespace": "MicroEvents.controller",
+        "name": "MyEvents"
+      }
     }
   }
 }
