@@ -16,7 +16,18 @@ Ext.define('MicroEvents.view.Settings', {
                 docked: 'top',
                 xtype: 'titlebar',
                 title: 'Settings'
+            },
+            {
+                xtype: "list",
+                store: "Settings",
+                itemTpl: '{title}' 
+
+
             }
+
+            
+
+
         ]
     }
 });

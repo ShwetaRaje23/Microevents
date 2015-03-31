@@ -1,7 +1,6 @@
 Ext.define('MicroEvents.view.Home', {
     extend: 'Ext.Panel',
     xtype: 'home',
-    id : 'home',
     requires: [
 
     ],
@@ -21,10 +20,24 @@ Ext.define('MicroEvents.view.Home', {
                 items : [
                     {
                         xtype : 'button',
-                        text : 'Add'
+                        text : 'Add New Event',
+                        action: 'new',
+                        flex : 1,
+                        height : 40,
+                        ui : 'confirm'
                     }
                 ]
+            },
+            
+            {
+            xtype: "list",
+            store : 'Events',
+            itemTpl : '{title}',
+            listeners: {
+                disclose: { fn: this.onEventsListDisclose, scope: this }
             }
+        }
         ]
     }
+    
 });
