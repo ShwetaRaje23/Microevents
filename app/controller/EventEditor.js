@@ -1,25 +1,37 @@
 var defaultUser = "Sasha"
 
-Ext.define('MicroEvents.controller.Login', {
+Ext.define('MicroEvents.controller.EventEditor', {
     extend: 'Ext.app.Controller',
     
     config: {
         refs: {
-            loginButton : 'login button[action=login]',
-            registerButton : 'login button[action=register]',
+            saveButton : 'eventeditor button[action=save]',
+            backButton : 'eventeditor button[action=back]'
         },
         control: {
-            loginButton: {
-                tap: 'doLogin'
+            backButton: {
+                tap: 'doHome'
             },
-            registerButton: {
-                tap : 'doRegister'
+            saveButton: {
+                tap: 'doHome'
             }
         }
     },
 
-    doLogin: function(){
-        console.log('Register');
+    doHome: function(){
+        console.log("Back Home")
+        Ext.getCmp('start').getLayout().setAnimation({
+            type: 'slide',
+            duration: 300,
+            reverse: true,
+            direction:'right'
+        });
+
+        Ext.getCmp('start').setActiveItem(2, {type : 'slide', direction:'left'});
+
+    },
+    doHome: function(){
+        console.log("Back Home")
         Ext.getCmp('start').getLayout().setAnimation({
             type: 'slide',
             duration: 300,
@@ -28,20 +40,6 @@ Ext.define('MicroEvents.controller.Login', {
         });
 
         Ext.getCmp('start').setActiveItem(2, {type : 'slide', direction:'right'});
-
-    },
-
-    doRegister: function(){
-        console.log('Register');
-
-        Ext.getCmp('start').getLayout().setAnimation({
-            type: 'slide',
-            duration: 300,
-            reverse: true,
-            direction:'left'
-        });
-
-        Ext.getCmp('start').setActiveItem(1, {type : 'slide', direction:'left'});
 
     },
     
