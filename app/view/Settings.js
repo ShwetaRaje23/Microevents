@@ -16,7 +16,6 @@ Ext.define('MicroEvents.view.Settings', {
                 docked: 'top',
                 xtype: 'titlebar',
                 title: 'Settings'
-<<<<<<< HEAD
             },
             {
                 xtype: "list",
@@ -26,10 +25,9 @@ Ext.define('MicroEvents.view.Settings', {
 
             }
 
+            
 
-=======
-            }
->>>>>>> 9cba0a77745d51c7eb5e55c56c18ee62ec0920f3
+
         ]
     }
 });
