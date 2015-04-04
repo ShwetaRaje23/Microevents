@@ -12,7 +12,7 @@ Ext.define('MicroEvents.controller.MyEvents', {
         }
     },
 
-    seeEventDetails: function(argument) {
+    seeEventDetails: function(t, ) {
         setTimeout(function(){t.deselect(index);}, 500);
     },
     

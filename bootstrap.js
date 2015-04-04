@@ -667,16 +667,26 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.viewport.WindowsPhone": [
     "Ext.viewport.WP"
   ],
+  "MicroEvents.controller.EventEditor": [],
+  "MicroEvents.controller.Events": [],
+  "MicroEvents.controller.Home": [],
   "MicroEvents.controller.Login": [],
   "MicroEvents.controller.Main": [],
   "MicroEvents.controller.MyEvents": [],
   "MicroEvents.controller.Register": [],
   "MicroEvents.model.Event": [],
+  "MicroEvents.model.Note": [],
+  "MicroEvents.model.Settings": [],
   "MicroEvents.store.Events": [],
+  "MicroEvents.store.Notes": [],
+  "MicroEvents.store.Settings": [],
+  "MicroEvents.view.EventEditor": [],
+  "MicroEvents.view.EventsListContainer": [],
   "MicroEvents.view.Home": [],
   "MicroEvents.view.Login": [],
   "MicroEvents.view.Main": [],
   "MicroEvents.view.MyEvents": [],
+  "MicroEvents.view.NotesList": [],
   "MicroEvents.view.Register": [],
   "MicroEvents.view.Settings": [],
   "MicroEvents.view.Start": []
@@ -1411,12 +1421,25 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.Ios": [],
   "Ext.viewport.Viewport": [],
   "Ext.viewport.WindowsPhone": [],
+  "MicroEvents.controller.EventEditor": [],
+  "MicroEvents.controller.Events": [],
+  "MicroEvents.controller.Home": [],
   "MicroEvents.controller.Login": [],
   "MicroEvents.controller.Main": [],
   "MicroEvents.controller.MyEvents": [],
   "MicroEvents.controller.Register": [],
   "MicroEvents.model.Event": [],
+  "MicroEvents.model.Note": [],
+  "MicroEvents.model.Settings": [],
   "MicroEvents.store.Events": [],
+  "MicroEvents.store.Notes": [],
+  "MicroEvents.store.Settings": [],
+  "MicroEvents.view.EventEditor": [
+    "widget.eventeditor"
+  ],
+  "MicroEvents.view.EventsListContainer": [
+    "widget.eventslistcontainer"
+  ],
   "MicroEvents.view.Home": [
     "widget.home"
   ],
@@ -1428,6 +1451,9 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "MicroEvents.view.MyEvents": [
     "widget.myevents"
+  ],
+  "MicroEvents.view.NotesList": [
+    "widget.noteslist"
   ],
   "MicroEvents.view.Register": [
     "widget.register"
