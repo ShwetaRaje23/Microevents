@@ -10,7 +10,16 @@ Ext.define("MicroEvents.store.Settings", {
         	{title:'Contacts'},
         	
         ]
-    }
+    },
+
+     
+    //trying to do listerners.
+     // itemTpl: '{title}',
+     //  listeners: {
+     //            select: function() {
+     //                Ext.Msg.alert('Selected!', 'You selected ' + record.get('title'));
+     //            }
+     //        }
 });
 
 
