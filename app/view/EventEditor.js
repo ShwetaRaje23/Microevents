@@ -42,12 +42,14 @@ Ext.define("MicroEvents.view.EventEditor", {
         var eventTitleEditor = {
             xtype: 'textfield',
             name: 'title',
+            id: 'eventEditor_title',
             label: 'Title',
             required: true
         };
 
         var eventNarrativeEditor = {
             xtype: 'textareafield',
+            id: 'eventEditor_desc',
             name: 'narrative',
             label: 'Description'
         };
@@ -57,6 +59,7 @@ Ext.define("MicroEvents.view.EventEditor", {
         var eventDate = {
             xtype : 'datepickerfield',
             name : 'date',
+            id: 'eventEditor_date',
             label: 'Date',
             dateFormat : 'd-m-Y',
             value : new Date()
@@ -127,6 +130,7 @@ Ext.define("MicroEvents.view.EventEditor", {
 
         var venue = {
             xtype : 'textfield',
+            id: 'eventEditor_venue',
             name : 'venue',
             label: 'Venue'
         }

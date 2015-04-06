@@ -5,11 +5,18 @@ Ext.define('MicroEvents.controller.Home', {
     
     config: {
         refs: {
-            newButton : 'home button[action=addEvent]'
+            newButton : 'home button[action=addEvent]',
+            eventlist : 'home list'
+
         },
         control: {
+
             newButton: {
                 tap: 'showAddEventForm'
+            },
+            eventlist:{
+                itemtap : 'showAddedEvent'
+
             }
         }
     },
@@ -24,6 +31,20 @@ Ext.define('MicroEvents.controller.Home', {
         });
 
         Ext.getCmp('start').setActiveItem(3, {type : 'slide', direction:'down'});
+
+    },
+    
+    showAddedEvent: function(t, index, target, record, e, eOpts){
+
+        console.log(index, record)
+        console.log(record.data.owner_id)
+       // if (owner_id == record.data.owner_id){
+        Ext.getCmp('eventEditor_title').setValue(record.data.title)
+        Ext.getCmp('eventEditor_venue').setValue(record.data.venue)
+        Ext.getCmp('eventEditor_date').setValue(record.data.date)
+        Ext.getCmp('eventTime').setValue(record.data.time)
+    //}
+        this.showAddEventForm()
 
     },
     
