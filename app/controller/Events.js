@@ -82,7 +82,7 @@ Ext.define("MicroEvents.controller.Events", {
             return;
         }
 
-        var eventsStore = Ext.getStore("Events");
+        var eventsStore = Ext.getStore("MyEvents");
 
         if (null == eventsStore.findRecord('id', currentEvent.data.id)) {
             eventsStore.add(currentEvent);
@@ -98,7 +98,7 @@ Ext.define("MicroEvents.controller.Events", {
     // Base Class functions.
     launch: function () {
         this.callParent(arguments);
-        Ext.getStore("Events").load();
+        Ext.getStore("MyEvents").load();
         console.log("launch");
     },
     init: function () {

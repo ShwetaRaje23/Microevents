@@ -1,4 +1,4 @@
-Ext.define("MicroEvents.store.Events", {
+Ext.define("MicroEvents.store.AllEvents", {
     extend: "Ext.data.Store",
     config: {
         model: "MicroEvents.model.Event",

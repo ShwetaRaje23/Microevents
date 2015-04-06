@@ -30,7 +30,7 @@ Ext.application({
     ],
 
     stores : [ 
-        'Events', 'Settings'
+        'AllEvents', 'Settings', 'MyEvents'
 
     ],
 
@@ -63,12 +63,12 @@ Ext.application({
     launch: function() {
         // Destroy the #appLoadingIndicator element
         
-        var eventsListContainer = {
-            xtype: "home"
-        };
-        var eventEditor = {
-            xtype: "eventeditor"
-        };
+        // var eventsListContainer = {
+        //     xtype: "home"
+        // };
+        // var eventEditor = {
+        //     xtype: "eventeditor"
+        // };
 
         //Ext.Viewport.add([eventEditor]);
         //Ext.fly('appLoadingIndicator').destroy();

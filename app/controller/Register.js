@@ -13,6 +13,25 @@ Ext.define('MicroEvents.controller.Register', {
     },
     
     registerUserAndSignIn : function(){
+
+        regValues = Ext.getCmp('registerForm').getValues()
+        console.log(regValues)
+
+        Ext.Ajax.request({
+            url: "http://127.0.0.1:8000/api/user/",
+            method : 'POST',
+            params: {
+                first_name : regValues.first_name,
+                last_name : regValues.last_name,
+                email : regValues.email
+            },
+            success: function(response){
+                localStorage.setItem("MicroEvents_user_id", response.user_id);
+                localStorage.setItem("MicroEvents_email", response.email);
+            }
+        });
+        
+
         Ext.getCmp('start').getLayout().setAnimation({
             type: 'slide',
             duration: 300,

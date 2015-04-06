@@ -10,33 +10,29 @@ Ext.define('MicroEvents.view.Home', {
         iconCls: 'home',
 
         styleHtmlContent: true,
-        scrollable: true,
-
         items: [
             {
                 docked: 'top',
-                xtype: 'titlebar',
+                xtype: 'toolbar',
                 title: 'Around Me',
                 items : [
+                    {xtype : 'spacer'},
                     {
                         xtype : 'button',
-                        text : 'Add New Event',
-                        action: 'new',
-                        flex : 1,
-                        height : 40,
+                        iconCls: 'add',
+                        action: 'addEvent',
                         ui : 'confirm'
                     }
                 ]
             },
-            
             {
-            xtype: "list",
-            store : 'Events',
-            itemTpl : '{title}',
-            listeners: {
-                disclose: { fn: this.onEventsListDisclose, scope: this }
+                xtype: "list",
+                store : 'AllEvents',
+                itemTpl : '{title}',
+                listeners: {
+                    disclose: { fn: this.onEventsListDisclose, scope: this }
+                }
             }
-        }
         ]
     }
     

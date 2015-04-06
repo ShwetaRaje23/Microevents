@@ -4,6 +4,22 @@ MicroEvents
 MicroEvents Web Mobile application for GaTech CIC Spring 2015
 
 
+To Do
+===========
+
+Sasha : 
+1. Update form with location, time/picker, circles invited, venue
+2. Make new circle (add with Email ID)
+3. Start settings page, do circles part
+
+
+
+
+
+
+
+
+
 How To Set Up This Project 
 ===========
 

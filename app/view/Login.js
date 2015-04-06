@@ -9,7 +9,6 @@ Ext.define('MicroEvents.view.Login', {
     ],
     config: {
         fullscreen: true,
-        scrollable : true,
         styleHtmlContent : true,
 
         layout : {
@@ -27,6 +26,7 @@ Ext.define('MicroEvents.view.Login', {
             },
             {
                 xtype : 'formpanel',
+                id : 'loginForm',
                 flex: 1,
                 width : '95%',
                 items: [

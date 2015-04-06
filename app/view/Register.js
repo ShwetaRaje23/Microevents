@@ -9,8 +9,8 @@ Ext.define('MicroEvents.view.Register', {
     ],
     config: {
         fullscreen: true,
-        scrollable : true,
         styleHtmlContent : true,
+        scrollable: false,
 
         layout : {
             type : 'vbox',
@@ -27,6 +27,8 @@ Ext.define('MicroEvents.view.Register', {
             },
             {
                 xtype : 'formpanel',
+                scrollable: false,
+                id : 'registerForm',
                 flex: 1,
                 width : '95%',
                 items: [

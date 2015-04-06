@@ -5,25 +5,25 @@ Ext.define('MicroEvents.controller.Home', {
     
     config: {
         refs: {
-            newButton : 'home button[action=new]'
+            newButton : 'home button[action=addEvent]'
         },
         control: {
             newButton: {
-                tap: 'doNewEvent'
+                tap: 'showAddEventForm'
             }
         }
     },
 
-    doNewEvent: function(){
+    showAddEventForm: function(){
         console.log("Reached")
         Ext.getCmp('start').getLayout().setAnimation({
             type: 'slide',
             duration: 300,
             reverse: true,
-            direction:'right'
+            direction:'down'
         });
 
-        Ext.getCmp('start').setActiveItem(3, {type : 'slide', direction:'right'});
+        Ext.getCmp('start').setActiveItem(3, {type : 'slide', direction:'down'});
 
     },
     

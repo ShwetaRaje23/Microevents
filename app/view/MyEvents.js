@@ -20,7 +20,7 @@ Ext.define('MicroEvents.view.MyEvents', {
                 xtype : 'list',
                 height : '100%',
                 width: '100%',
-                store : 'Events',
+                store : 'MyEvents',
                 itemTpl : '{title}'
             }
         ]

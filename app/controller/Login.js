@@ -1,4 +1,6 @@
 var defaultUser = "Sasha"
+var allEventsURL = ""
+var myEventsURL = ""
 
 Ext.define('MicroEvents.controller.Login', {
     extend: 'Ext.app.Controller',
@@ -6,7 +8,7 @@ Ext.define('MicroEvents.controller.Login', {
     config: {
         refs: {
             loginButton : 'login button[action=login]',
-            registerButton : 'login button[action=register]',
+            registerButton : 'login button[action=register]'
         },
         control: {
             loginButton: {
@@ -18,8 +20,33 @@ Ext.define('MicroEvents.controller.Login', {
         }
     },
 
+    loadStores: function() {
+        
+    
+        
+    },
+
     doLogin: function(){
-        console.log('Register');
+
+        logValues = Ext.getCmp('loginForm').getValues()
+
+        Ext.Ajax.request({
+            url: "http://127.0.0.1:8000/api/login/",
+            method : 'POST',
+            params: {
+                email : logValues.email
+            },
+            success: function(response){
+                localStorage.setItem("MicroEvents_user_id", response.user_id);
+                localStorage.setItem("MicroEvents_email", response.email);
+            }
+        });
+
+        this.slideToHome()
+
+    },
+
+    slideToHome : function() {
         Ext.getCmp('start').getLayout().setAnimation({
             type: 'slide',
             duration: 300,
@@ -28,12 +55,10 @@ Ext.define('MicroEvents.controller.Login', {
         });
 
         Ext.getCmp('start').setActiveItem(2, {type : 'slide', direction:'right'});
-
     },
 
     doRegister: function(){
-        console.log('Register');
-
+    
         Ext.getCmp('start').getLayout().setAnimation({
             type: 'slide',
             duration: 300,
@@ -48,5 +73,20 @@ Ext.define('MicroEvents.controller.Login', {
     //called when the Application is launched, remove if not needed
     launch: function(app) {
         
+        if(localStorage.getItem("MicroEvents_user_id") != ""){
+            Ext.Ajax.request({
+                url: "http://127.0.0.1:8000/api/login/",
+                method : 'POST',
+                params: {
+                    email : localStorage.getItem("MicroEvents_user_id")
+                },
+                success: function(response){
+                    localStorage.setItem("MicroEvents_user_id", response.user_id);
+                    localStorage.setItem("MicroEvents_email", response.email);
+                }
+            });
+        }
+
+
     }
 });
