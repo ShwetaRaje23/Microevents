@@ -132,9 +132,6 @@ Ext.define("MicroEvents.view.EventEditor", {
         }
 
 
-
-
-
         this.add([
             topToolbar,
             { 
