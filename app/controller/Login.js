@@ -25,6 +25,12 @@ Ext.define('MicroEvents.controller.Login', {
         Ext.getStore('Settings').getProxy().setUrl(settingsURL);
         Ext.getStore('Settings').load(); 
         // console.log(Ext.getStore('Settings'))
+
+        // Load events
+        eventsURL = "http://127.0.0.1:8000/api/user/"+user_id+"/"
+        Ext.getStore('Settings').getProxy().setUrl(settingsURL);
+        Ext.getStore('Settings').load(); 
+
              
     },
 
