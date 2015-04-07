@@ -18,7 +18,10 @@ Ext.define('MicroEvents.controller.Main', {
     },
 
     switchingBetweenTabs: function(t, val, oldVal, eOpts) {
-
+        if(val.id == 'settings'){
+              
+            settingsDetailTpl.overwrite(Ext.getCmp('settingsDetailPanel').element, Ext.getStore('Settings').getAt(0).getData());
+        }
         
     },
     

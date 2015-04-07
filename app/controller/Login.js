@@ -1,8 +1,6 @@
 var temp;
 
-var defaultUser = "Sasha"
-var allEventsURL = ""
-var myEventsURL = ""
+var allEventsURL = "", myEventsURL = "", settingsURL = "";
 
 Ext.define('MicroEvents.controller.Login', {
     extend: 'Ext.app.Controller',
@@ -22,10 +20,12 @@ Ext.define('MicroEvents.controller.Login', {
         }
     },
 
-    loadStores: function() {
-        
-    
-        
+    loadStores: function(user_id) {
+        settingsURL = "http://127.0.0.1:8000/api/user/"+user_id+"/"
+        Ext.getStore('Settings').getProxy().setUrl(settingsURL);
+        Ext.getStore('Settings').load(); 
+        // console.log(Ext.getStore('Settings'))
+             
     },
 
     doLogin: function(){
@@ -42,6 +42,7 @@ Ext.define('MicroEvents.controller.Login', {
                 temp = response
                 localStorage.setItem("MicroEvents_user_id", JSON.parse(temp.responseText).user_id);
                 localStorage.setItem("MicroEvents_email", JSON.parse(temp.responseText).email);
+                this.loadStores(localStorage.getItem("MicroEvents_user_id"))
             }
         });
 
@@ -77,10 +78,11 @@ Ext.define('MicroEvents.controller.Login', {
     launch: function(app) {
         
         if(localStorage.getItem("MicroEvents_user_id") && parseInt(localStorage.getItem("MicroEvents_user_id"))>0){
+            this.loadStores(localStorage.getItem("MicroEvents_user_id"))
             this.slideToHome()
         }
 
-        
+
 
 
     }

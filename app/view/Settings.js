@@ -1,6 +1,8 @@
-var settingsDetailTpl = Ext.XTemplate(
-    'Name : {first_name} {last_name}',
-    'Email : {email}'
+var settingsDetailTpl = new Ext.XTemplate(
+    '<tpl>',
+        '<br /><b>Name : </b>{first_name} {last_name}',
+        '<br /><b>Email :</b> {email}',
+    '</tpl>'
 );
 
 
@@ -26,46 +28,19 @@ Ext.define('MicroEvents.view.Settings', {
             },
             {
                 xtype : 'container',
-                // margin : '-15 -15 -15 -15',
                 width  :'100%',
+                margin : '0 0 0 15',
                 height: '100%',
-                style : 'background-color:#fcc;',
                 flex : 1,
                 id : 'settingsDetailPanel',
-                tpl : settingsDetailTpl,
-                items : [
-                    // {
-                    //     xtype : 'formpanel',
-                    //     width : '100%',
-                    //     height : '100%',
-                    //     items : [
-                    //         {
-                    //             xtype: 'fieldset',
-                    //             title: 'Enter your name',
-                    //             items: [
-                    //                 {
-                    //                     xtype: 'textfield',
-                    //                     label: 'First Name',
-                    //                     name: 'firstName'
-                    //                 },
-                    //                 {
-                    //                     xtype: 'textfield',
-                    //                     label: 'Last Name',
-                    //                     name: 'lastName'
-                    //                 }
-                    //             ]
-                    //         }
-                    //     ]
-                    // }
-                ]
-
+                tpl : settingsDetailTpl
             },
             {
                 xtype : 'container',
-                // margin : '-15 -15 -15 -15',
+                
                 styleHtmlContent: true,
                 style : 'background-color:#aaa;',
-                flex: 2,
+                flex: 5,
                 items : [
                     {
                         xtype : 'titlebar',

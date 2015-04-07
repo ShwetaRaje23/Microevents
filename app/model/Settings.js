@@ -3,14 +3,9 @@ Ext.define('MicroEvents.model.Settings', {
     
     config: {
         fields: [
-            { name: 'eid', type: 'auto' },
-            { name: 'title', type: 'auto' },
-            { name: 'venue', type: 'auto' },
-            { name: 'date', type: 'auto' },
-            { name: 'time', type: 'auto' },
-            { name: 'owner_id', type: 'auto' },
-            { name: 'circle_id', type: 'auto' },
-            { name: 'is_closed', type: 'boolean' }
+            { name: 'first_name', type: 'auto' },
+            { name: 'last_name', type: 'auto' },
+            { name: 'email', type: 'auto' }
         ]
     }
 });
