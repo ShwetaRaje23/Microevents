@@ -67,8 +67,6 @@ Ext.define("MicroEvents.view.EventEditor", {
             value : new Date()
         }
 
-
-
         var picker = Ext.create('Ext.Picker', {
             slots: [
                 {
@@ -131,11 +129,24 @@ Ext.define("MicroEvents.view.EventEditor", {
             }
         }
 
+        var attendees_number = {
+            xtype : 'numberfield',
+            name: 'attendees_number',
+            stepValue: 1,
+            minValue: 1,
+            label: 'No. of Invitees'
+        }
+
         var venue = {
             xtype : 'textfield',
             id: 'eventEditor_venue',
             name : 'venue',
             label: 'Venue'
+        }
+
+        var map = {
+            xtype : 'map',
+            useCurrentLocation : true
         }
 
 
@@ -148,7 +159,8 @@ Ext.define("MicroEvents.view.EventEditor", {
                     eventNarrativeEditor,
                     venue,
                     eventDate,
-                    eventTime
+                    eventTime,
+                    attendees_number
                 ]
             }
         ]);
