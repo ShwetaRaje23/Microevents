@@ -55,6 +55,8 @@ Ext.define("MicroEvents.view.EventEditor", {
         };
 
         todaysDate = new Date();
+        time = (((todaysDate.getHours()>12)?(todaysDate.getHours()-12):todaysDate.getHours()) + ":" + todaysDate.getMinutes() + " " + ((todaysDate.getHours()>12)?"AM":"PM"));
+
 
         var eventDate = {
             xtype : 'datepickerfield',
@@ -64,6 +66,8 @@ Ext.define("MicroEvents.view.EventEditor", {
             dateFormat : 'd-m-Y',
             value : new Date()
         }
+
+
 
         var picker = Ext.create('Ext.Picker', {
             slots: [
@@ -105,8 +109,6 @@ Ext.define("MicroEvents.view.EventEditor", {
                 hide : function(t, eOpts) {
                     time = t.getValue()
                     correctedTime = time.hour + ":" + time.minutes + " " + time.ampm;
-                    // console.log(Ext.getCmp('eventTime').getValue())
-                    // console.log(correctedTime)
                     Ext.getCmp('eventTime').setValue(correctedTime)
                 
                     
@@ -119,11 +121,12 @@ Ext.define("MicroEvents.view.EventEditor", {
             id : 'eventTime',
             name : 'time',
             ui : 'select',
-            value: "",
+            value: time,
             label: 'Time',
             listeners: {
                 focus: function(t, e, eOpts) {
                     picker.show()
+
                 },
             }
         }

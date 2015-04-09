@@ -14,16 +14,7 @@ Ext.define('MicroEvents.view.Home', {
             {
                 docked: 'top',
                 xtype: 'toolbar',
-                title: 'Around Me',
-                items : [
-                    {xtype : 'spacer'},
-                    {
-                        xtype : 'button',
-                        iconCls: 'add',
-                        action: 'addEvent',
-                        ui : 'confirm'
-                    }
-                ]
+                title: 'Around Me'
             },
             {
                 xtype: "list",

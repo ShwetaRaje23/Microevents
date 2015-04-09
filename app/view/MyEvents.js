@@ -13,8 +13,17 @@ Ext.define('MicroEvents.view.MyEvents', {
         items: [
             {
                 docked: 'top',
-                xtype: 'titlebar',
-                title: 'My Events'
+                xtype: 'toolbar',
+                title: 'My Events',
+                items : [
+                    {xtype : 'spacer'},
+                    {
+                        xtype : 'button',
+                        iconCls: 'add',
+                        action: 'addEvent',
+                        ui : 'confirm'
+                    }
+                ]
             },
             {
                 xtype : 'list',

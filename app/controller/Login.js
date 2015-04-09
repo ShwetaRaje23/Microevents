@@ -1,6 +1,9 @@
 var temp;
 
-var allEventsURL = "", myEventsURL = "", settingsURL = "";
+// var allEventsURL = "", myEventsURL="";
+var allEventsURL = "http://127.0.0.1:8000/api/user/1/";
+var myEventsURL = "http://127.0.0.1:8000/api/user/1/";
+var settingsURL = "http://127.0.0.1:8000/api/user/1/";
 
 Ext.define('MicroEvents.controller.Login', {
     extend: 'Ext.app.Controller',
@@ -24,29 +27,59 @@ Ext.define('MicroEvents.controller.Login', {
         settingsURL = "http://127.0.0.1:8000/api/user/"+user_id+"/"
         Ext.getStore('Settings').getProxy().setUrl(settingsURL);
         Ext.getStore('Settings').load(); 
-        // console.log(Ext.getStore('Settings'))
-             
+
+        myEventsURL = "http://127.0.0.1:8000/api/user/"+user_id+"/"
+        console.log(myEventsURL)
+        Ext.getStore('MyEvents').getProxy().setUrl(myEventsURL);
+        Ext.getStore('MyEvents').load();             
     },
 
     doLogin: function(){
 
         logValues = Ext.getCmp('loginForm').getValues()
+        check = false;
 
-        Ext.Ajax.request({
-            url: "http://127.0.0.1:8000/api/login/",
-            method : 'POST',
-            params: {
-                email : logValues.email
-            },
-            success: function(response){
-                temp = response
-                localStorage.setItem("MicroEvents_user_id", JSON.parse(temp.responseText).user_id);
-                localStorage.setItem("MicroEvents_email", JSON.parse(temp.responseText).email);
-                this.loadStores(localStorage.getItem("MicroEvents_user_id"))
-            }
-        });
+        if(logValues.email == ""){
+            Ext.Msg.alert('Email Incorrect', 'Please enter your email correctly to proceed.', Ext.emptyFn);
+        }
 
-        this.slideToHome()
+        else{
+            Ext.Ajax.request({
+                url: "http://127.0.0.1:8000/api/login/",
+                method : 'POST',
+                noCache: false,
+                params: {
+                    email : logValues.email
+                },
+                success: function(response){
+                    console.log(response)
+                    temp = response
+                    console.log(id = JSON.parse(temp.responseText).user_id)
+
+                    if(parseInt(JSON.parse(temp.responseText).user_id) > 0){
+                        check = true;
+                        localStorage.setItem("MicroEvents_user_id", JSON.parse(temp.responseText).user_id);
+                        localStorage.setItem("MicroEvents_email", JSON.parse(temp.responseText).email);  
+                        MicroEvents.app.getController("Login").loadStores(localStorage.getItem("MicroEvents_user_id"))
+                        MicroEvents.app.getController("Login").slideToHome() 
+                    }
+                    else {
+                        Ext.Msg.confirm(
+                            'Welcome to MicroEvents',
+                            "This Email ID has not been used with MicroEvents before. Register to continue.",
+                            function(button){
+                                if(button=='yes'){
+                                Ext.getCmp('register_email').setValue(logValues.email)
+                                MicroEvents.app.getController("Login").doRegister()
+                            }
+                        });
+                    }
+                    
+                    
+                }
+            });
+        }
+            
 
     },
 
@@ -77,10 +110,10 @@ Ext.define('MicroEvents.controller.Login', {
     //called when the Application is launched, remove if not needed
     launch: function(app) {
         
-        if(localStorage.getItem("MicroEvents_user_id") && parseInt(localStorage.getItem("MicroEvents_user_id"))>0){
-            this.loadStores(localStorage.getItem("MicroEvents_user_id"))
-            this.slideToHome()
-        }
+        // if(localStorage.getItem("MicroEvents_user_id") && parseInt(localStorage.getItem("MicroEvents_user_id"))>0){
+        //     this.loadStores(localStorage.getItem("MicroEvents_user_id"))
+        //     this.slideToHome()
+        // }
 
 
 

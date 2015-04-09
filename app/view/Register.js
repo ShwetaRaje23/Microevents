@@ -34,17 +34,18 @@ Ext.define('MicroEvents.view.Register', {
                 items: [
                     {
                         xtype : 'textfield',
-                        name : 'fname',
+                        name : 'first_name',
                         label : 'First Name'
                     },
                     {
                         xtype : 'textfield',
-                        name : 'lname',
+                        name : 'last_name',
                         label : 'Last Name'
                     },
                     {
                         xtype: 'emailfield',
                         name: 'email',
+                        id : 'register_email',
                         label: 'Email'
                     },
                     {

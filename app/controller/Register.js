@@ -28,6 +28,7 @@ Ext.define('MicroEvents.controller.Register', {
             success: function(response){
                 localStorage.setItem("MicroEvents_user_id", response.user_id);
                 localStorage.setItem("MicroEvents_email", response.email);
+                console.log(response.responseText)
             }
         });
         

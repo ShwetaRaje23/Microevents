@@ -33,6 +33,7 @@ Ext.define('MicroEvents.view.Login', {
                     {
                         xtype: 'emailfield',
                         name: 'email',
+                        id : 'login_email',
                         label: 'Email'
                     },
                     {

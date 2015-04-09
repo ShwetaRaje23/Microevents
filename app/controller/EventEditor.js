@@ -30,9 +30,14 @@ Ext.define('MicroEvents.controller.EventEditor', {
     },
 
     saveEvent: function() {
-        
         newEventValues = Ext.getCmp('eventEditor').getValues()
 
+        temp_date = newEventValues.date
+        date_string = temp_date.getFullYear()+"-"+temp_date.getMonth()+"-"+temp_date.getDate()+" "+temp_date.getHours()+":"+temp_date.getMinutes()+":00";
+        console.log(date_string)
+
+
+        console.log(newEventValues)
         this.doHome()
     },
     

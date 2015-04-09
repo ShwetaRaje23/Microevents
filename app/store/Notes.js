@@ -4,6 +4,7 @@ Ext.define("MicroEvents.store.Notes", {
     config: {
         model: "MicroEvents.model.Note",
         proxy: {
+            noCache: false,
             type: 'localstorage',
             id: 'notes-app-store'
         },

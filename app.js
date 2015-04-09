@@ -35,7 +35,7 @@ Ext.application({
     ],
 
     controllers: [
-        'Home', 'Login', 'Register', 'Main', 'Events', 'EventEditor'
+        'Home', 'Login', 'Register', 'Main', 'Events', 'EventEditor', 'MyEvents'
     ],
 
     views: [
