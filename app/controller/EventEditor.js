@@ -31,6 +31,30 @@ Ext.define('MicroEvents.controller.EventEditor', {
 
     saveEvent: function() {
         newEventValues = Ext.getCmp('eventEditor').getValues()
+        console.log(newEventValues)
+
+        var d = newEventValues.date
+        date = d.getFullYear() + '-' + d.getMonth() + '-' + d.getDate() + ' ' + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds()
+        console.log(date)
+        Ext.Ajax.request({
+            url: "http://127.0.0.1:8000/api/event/",
+            method : 'POST',
+            params: {
+                event_name: newEventValues.title,
+                event_date_time: date,
+                user_id:localStorage.getItem("MicroEvents_user_id"),
+                venue:newEventValues.venue,
+                invites:1
+
+            },
+            success: function(response){
+                console.log(response)
+                // temp = response
+                // localStorage.setItem("MicroEvents_user_id", JSON.parse(temp.responseText).user_id);
+                // localStorage.setItem("MicroEvents_email", JSON.parse(temp.responseText).email);
+                // this.loadStores(localStorage.getItem("MicroEvents_user_id"))
+            }
+        });
 
         temp_date = newEventValues.date
         date_string = temp_date.getFullYear()+"-"+temp_date.getMonth()+"-"+temp_date.getDate()+" "+temp_date.getHours()+":"+temp_date.getMinutes()+":00";
