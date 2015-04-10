@@ -1,6 +1,6 @@
-myEventsTpl = new Ext.XTemplate(
+var myEventsTpl = new Ext.XTemplate(
     '<p><font size=3><b>{event_name}</b></font>',
-        '<p><font size=2>@{venue}</font></p>',  // use current array index to autonumber
+        '<p><font size=2>@{venue} | {time}</font></p>',  // use current array index to autonumber
     '</p>'
 );
 

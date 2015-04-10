@@ -25,9 +25,8 @@ Ext.define('MicroEvents.view.Start', {
             {
                 xtype : 'circleEditor'
             },
-
             {
-                xtype : 'home'
+                xtype : 'circleListMultiSelect'
             }
         ]
     }
