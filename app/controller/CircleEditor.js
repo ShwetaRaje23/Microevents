@@ -35,26 +35,28 @@ Ext.define('MicroEvents.controller.CircleEditor', {
 
         // var d = newCircleValues.date
         // date = d.getFullYear() + '-' + d.getMonth() + '-' + d.getDate() + ' ' + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds()
-        // console.log(date)
-        // Ext.Ajax.request({
-        //     url: "http://127.0.0.1:8000/api/circle/",
-        //     method : 'POST',
-        //     params: {
-        //         circle_name: newCircleValues.title,
-        //         circle_date_time: date,
-        //         user_id:localStorage.getItem("MicroEvents_user_id"),
-        //         venue:newCircleValues.venue,
-        //         invites:1
+        //console.log(date)
+        Ext.Ajax.request({
+            url: "http://127.0.0.1:8000/api/circle/",
+            method : 'POST',
+            noCache: false,
+            pageParam: false,
+            startParam: false,
+            limitParam: false,
+            params: {
+                circle_name: newCircleValues.title,
+                user_ids: newCircleValues.invitees,
+                user_id: localStorage.getItem("MicroEvents_user_id")
 
-        //     },
-        //     success: function(response){
-        //         console.log(response)
-        //         // temp = response
-        //         // localStorage.setItem("MicroEvents_user_id", JSON.parse(temp.responseText).user_id);
-        //         // localStorage.setItem("MicroEvents_email", JSON.parse(temp.responseText).email);
-        //         // this.loadStores(localStorage.getItem("MicroEvents_user_id"))
-        //     }
-        // });
+            },
+            success: function(response){
+                console.log(response)
+                // temp = response
+                // localStorage.setItem("MicroEvents_user_id", JSON.parse(temp.responseText).user_id);
+                // localStorage.setItem("MicroEvents_email", JSON.parse(temp.responseText).email);
+                // this.loadStores(localStorage.getItem("MicroEvents_user_id"))
+            }
+        });
 
         //temp_date = newCircleValues.date
         //date_string = temp_date.getFullYear()+"-"+temp_date.getMonth()+"-"+temp_date.getDate()+" "+temp_date.getHours()+":"+temp_date.getMinutes()+":00";

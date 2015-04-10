@@ -50,14 +50,14 @@ Ext.define("MicroEvents.view.CircleEditor", {
         var circleNarrativeEditor = {
             xtype: 'textareafield',
             id: 'circleEditor_desc',
-            name: 'narrative',
+            name: 'description',
             label: 'Description'
         };
 
         var circleUsers = {
             xtype: 'textareafield',
-            id: 'circleEditor_desc2',
-            name: 'narrative',
+            id: 'circleEditor_invitees',
+            name: 'invitees',
             label: 'People'
         };
 
