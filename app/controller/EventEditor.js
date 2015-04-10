@@ -1,5 +1,3 @@
-var defaultUser = "Sasha"
-
 Ext.define('MicroEvents.controller.EventEditor', {
     extend: 'Ext.app.Controller',
     

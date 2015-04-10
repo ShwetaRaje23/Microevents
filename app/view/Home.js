@@ -1,3 +1,10 @@
+var allEventsTpl = new Ext.XTemplate(
+    '<p><font size=3><b>{event_name} with {owner_name}</b></font>',
+        '<br><font size=2>{venue} | @{time}</font>',  // use current array index to autonumber
+    '</p>'
+);
+
+
 Ext.define('MicroEvents.view.Home', {
     extend: 'Ext.Panel',
     xtype: 'home',
@@ -9,7 +16,7 @@ Ext.define('MicroEvents.view.Home', {
         title: 'Home',
         iconCls: 'home',
 
-        styleHtmlContent: true,
+        // styleHtmlContent: true,
         items: [
             {
                 docked: 'top',
@@ -19,7 +26,8 @@ Ext.define('MicroEvents.view.Home', {
             {
                 xtype: "list",
                 store : 'AllEvents',
-                itemTpl : '{title}',
+                itemTpl : allEventsTpl,
+                grouped : true,
                 listeners: {
                     disclose: { fn: this.onEventsListDisclose, scope: this }
                 }

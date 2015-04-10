@@ -16,6 +16,15 @@ Ext.define("MicroEvents.store.AllEvents", {
             reader : {
                 type : 'json'
             }
-        }
+        },
+        grouper: {
+            groupFn: function(record) {
+                var sortDate = new Date(record.get('date'))
+                console.log(sortDate.toDateString())
+                return sortDate.toDateString()
+            }
+        },
+        groupDir: 'DESC',           
+        sorters: 'date',
     }
 });
