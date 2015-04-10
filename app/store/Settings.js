@@ -12,8 +12,7 @@ Ext.define("MicroEvents.store.Settings", {
             limitParam: false,
             useDefaultXhrHeader : false,
             reader : {
-                type : 'json',
-                rootProperty : 'user'
+                type : 'json'
             }
         }
     }
