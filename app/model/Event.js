@@ -1,6 +1,5 @@
 Ext.define('MicroEvents.model.Event', {
     extend: 'Ext.data.Model',
-    
     config: {
         fields: [
             { name: 'event_id', type: 'auto' },

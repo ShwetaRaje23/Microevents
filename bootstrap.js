@@ -667,6 +667,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.viewport.WindowsPhone": [
     "Ext.viewport.WP"
   ],
+  "MicroEvents.controller.CircleEditor": [],
   "MicroEvents.controller.EventEditor": [],
   "MicroEvents.controller.Events": [],
   "MicroEvents.controller.Home": [],
@@ -674,12 +675,15 @@ Ext.ClassManager.addNameAlternateMappings({
   "MicroEvents.controller.Main": [],
   "MicroEvents.controller.MyEvents": [],
   "MicroEvents.controller.Register": [],
+  "MicroEvents.controller.Settings": [],
   "MicroEvents.model.Circle": [],
   "MicroEvents.model.Event": [],
   "MicroEvents.model.Settings": [],
   "MicroEvents.store.AllEvents": [],
+  "MicroEvents.store.MyCircles": [],
   "MicroEvents.store.MyEvents": [],
   "MicroEvents.store.Settings": [],
+  "MicroEvents.view.CircleEditor": [],
   "MicroEvents.view.EventEditor": [],
   "MicroEvents.view.Home": [],
   "MicroEvents.view.Login": [],
@@ -1420,6 +1424,7 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.Ios": [],
   "Ext.viewport.Viewport": [],
   "Ext.viewport.WindowsPhone": [],
+  "MicroEvents.controller.CircleEditor": [],
   "MicroEvents.controller.EventEditor": [],
   "MicroEvents.controller.Events": [],
   "MicroEvents.controller.Home": [],
@@ -1427,12 +1432,17 @@ Ext.ClassManager.addNameAliasMappings({
   "MicroEvents.controller.Main": [],
   "MicroEvents.controller.MyEvents": [],
   "MicroEvents.controller.Register": [],
+  "MicroEvents.controller.Settings": [],
   "MicroEvents.model.Circle": [],
   "MicroEvents.model.Event": [],
   "MicroEvents.model.Settings": [],
   "MicroEvents.store.AllEvents": [],
+  "MicroEvents.store.MyCircles": [],
   "MicroEvents.store.MyEvents": [],
   "MicroEvents.store.Settings": [],
+  "MicroEvents.view.CircleEditor": [
+    "widget.circleEditor"
+  ],
   "MicroEvents.view.EventEditor": [
     "widget.eventEditor"
   ],

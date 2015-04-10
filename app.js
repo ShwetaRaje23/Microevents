@@ -26,11 +26,11 @@ Ext.application({
     ],
 
     controllers: [
-        'Home', 'Login', 'Register', 'Main', 'Events', 'EventEditor', 'MyEvents'
+        'Home', 'Login', 'Register', 'Main', 'Events', 'EventEditor', 'MyEvents', 'CircleEditor', 'Settings'
     ],
 
     views: [
-        'Home', 'Start', 'Main', 'Login', 'Register', 'Settings', 'MyEvents', 'EventEditor'
+        'Home', 'Start', 'Main', 'Login', 'Register', 'Settings', 'MyEvents', 'EventEditor', 'EventsListContainer', 'CircleEditor'
     ],
 
     icon: {
@@ -55,6 +55,7 @@ Ext.application({
 
         //Ext.Viewport.add([eventEditor]);
         Ext.fly('appLoadingIndicator').destroy();
+
 
         // Initialize the main view
         Ext.Viewport.add(Ext.create('MicroEvents.view.Start'));
