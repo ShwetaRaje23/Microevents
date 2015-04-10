@@ -23,6 +23,10 @@ Ext.define('MicroEvents.view.Start', {
                 xtype : 'eventEditor'
             },
             {
+                xtype : 'circleEditor'
+            },
+
+            {
                 xtype : 'home'
             }
         ]

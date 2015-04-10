@@ -35,11 +35,11 @@ Ext.application({
     ],
 
     controllers: [
-        'Home', 'Login', 'Register', 'Main', 'Events', 'EventEditor', 'MyEvents'
+        'Home', 'Login', 'Register', 'Main', 'Events', 'EventEditor', 'MyEvents', 'CircleEditor', 'Settings'
     ],
 
     views: [
-        'Home', 'Start', 'Main', 'Login', 'Register', 'Settings', 'MyEvents', 'EventEditor', 'EventsListContainer'
+        'Home', 'Start', 'Main', 'Login', 'Register', 'Settings', 'MyEvents', 'EventEditor', 'EventsListContainer', 'CircleEditor'
     ],
 
     icon: {
@@ -66,11 +66,11 @@ Ext.application({
         // var eventsListContainer = {
         //     xtype: "home"
         // };
-        // var eventEditor = {
-        //     xtype: "eventeditor"
-        // };
+        //var circleEditor = {
+        //    xtype: "circleEditor"
+        //};
 
-        //Ext.Viewport.add([eventEditor]);
+        //Ext.Viewport.add([circleEditor]);
         //Ext.fly('appLoadingIndicator').destroy();
 
         // Initialize the main view

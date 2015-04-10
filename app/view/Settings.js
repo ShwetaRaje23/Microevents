@@ -46,10 +46,14 @@ Ext.define('MicroEvents.view.Settings', {
                         xtype : 'titlebar',
                         margin : '-15 -15 -15 -15',
                         title : 'My Circles',
+                        
                         items : [
+                            {xtype : 'spacer'},
                             {
                                 xtype : 'button',
-                                iconCls: 'add'
+                                iconCls: 'add',
+                                action: 'addCircle',
+                                ui : 'confirm'
                             }
                         ]
                     }
