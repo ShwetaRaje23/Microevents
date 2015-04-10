@@ -15,7 +15,6 @@ Ext.define('MicroEvents.controller.Register', {
     registerUserAndSignIn : function(){
 
         regValues = Ext.getCmp('registerForm').getValues()
-        console.log(regValues)
 
         Ext.Ajax.request({
             url: "http://127.0.0.1:8000/api/user/",
@@ -26,9 +25,9 @@ Ext.define('MicroEvents.controller.Register', {
                 email : regValues.email
             },
             success: function(response){
-                localStorage.setItem("MicroEvents_user_id", response.user_id);
-                localStorage.setItem("MicroEvents_email", response.email);
-                console.log(response.responseText)
+                localStorage.setItem("MicroEvents_user_id", JSON.parse(response.responseText).user_id);
+                localStorage.setItem("MicroEvents_email", JSON.parse(response.responseText).email);
+                MicroEvents.app.getController("Login").loadStores(JSON.parse(response.responseText).user_id);
             }
         });
         

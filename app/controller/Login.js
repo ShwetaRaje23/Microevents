@@ -4,6 +4,7 @@ var temp;
 var allEventsURL = "http://127.0.0.1:8000/api/user/1/";
 var myEventsURL = "http://127.0.0.1:8000/api/user/1/";
 var settingsURL = "http://127.0.0.1:8000/api/user/1/";
+var circleURL = "http://127.0.0.1:8000/api/circle/?user_id=1";
 
 Ext.define('MicroEvents.controller.Login', {
     extend: 'Ext.app.Controller',
@@ -24,6 +25,8 @@ Ext.define('MicroEvents.controller.Login', {
     },
 
     loadStores: function(user_id) {
+        user_id = localStorage.getItem('MicroEvents_user_id');
+
         settingsURL = "http://127.0.0.1:8000/api/user/"+user_id+"/"
         Ext.getStore('Settings').getProxy().setUrl(settingsURL);
         Ext.getStore('Settings').load(); 
@@ -38,6 +41,11 @@ Ext.define('MicroEvents.controller.Login', {
         Ext.getStore('AllEvents').getProxy().setUrl(allEventsURL);
         Ext.getStore('AllEvents').load();             
         console.log(allEventsURL)
+
+        circleURL = "http://127.0.0.1:8000/api/circle/?user_id="+user_id
+        Ext.getStore('MyCircles').getProxy().setUrl(circleURL);
+        Ext.getStore('MyCircles').load();             
+        console.log(circleURL)
     },
 
     doLogin: function(){

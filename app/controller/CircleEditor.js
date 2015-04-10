@@ -45,7 +45,7 @@ Ext.define('MicroEvents.controller.CircleEditor', {
             limitParam: false,
             params: {
                 circle_name: newCircleValues.title,
-                user_ids: newCircleValues.invitees,
+                email_ids: newCircleValues.invitees,
                 user_id: localStorage.getItem("MicroEvents_user_id")
 
             },

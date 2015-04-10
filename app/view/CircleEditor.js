@@ -104,7 +104,7 @@ Ext.define("MicroEvents.view.CircleEditor", {
                     Ext.getCmp('eventTime').setValue(correctedTime)
                 
                     
-                },
+                }
             }
         });
 

@@ -51,15 +51,7 @@ Ext.define('MicroEvents.controller.EventEditor', {
             },
             success: function(response){
                 console.log(response)
-                // Ext.getStore('MyEvents').add({
-                //     "date": "2015-04-10", 
-                //     "time":"11:00 AM"
-                //     "owner_name": "Sasha Azad", 
-                //     "event_id": 1, 
-                //     "venue": "GaTech", 
-                //     "event_name": "New Event", 
-                //     "owner_id": 1
-                // });
+                Ext.getStore('MyEvents').add(response.responseText);
             }
         });
 

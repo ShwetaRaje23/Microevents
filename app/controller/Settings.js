@@ -3,13 +3,31 @@ Ext.define('MicroEvents.controller.Settings', {
     
     config: {
         refs: {
-            newButton : 'settings button[action=addCircle]'
+            newButton : 'settings button[action=addCircle]',
+            logoutButton : 'settings button[action=logout]'
         },
         control: {
             newButton: {
                 tap: 'showAddCircleForm'
+            },
+            logoutButton: {
+                tap: 'logout'
             }
         }
+    },
+
+    logout: function() {
+        Ext.getCmp('start').getLayout().setAnimation({
+            type: 'slide',
+            duration: 300,
+            reverse: true,
+            direction:'left'
+        });
+
+        localStorage.setItem("MicroEvents_user_id", "");
+        localStorage.setItem("MicroEvents_email", ""); 
+
+        Ext.getCmp('start').setActiveItem(0, {type : 'slide', direction:'left'});
     },
 
     showAddCircleForm: function(){

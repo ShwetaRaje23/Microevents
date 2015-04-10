@@ -18,11 +18,11 @@ Ext.application({
     ],
 
     models : [
-        'Event', 'Settings'
+        'Event', 'Settings', 'Circle'
     ],
 
     stores : [ 
-        'AllEvents', 'Settings', 'MyEvents'
+        'AllEvents', 'Settings', 'MyEvents', 'MyCircles'
     ],
 
     controllers: [

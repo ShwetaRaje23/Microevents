@@ -55,7 +55,7 @@ Ext.define('MicroEvents.view.Login', {
                         flex : 1,
                         text : '<font size=2>Not a member? Register now!</font>',
                         ui : 'plain'
-                    },
+                    }
                 ]
             },
             {

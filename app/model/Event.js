@@ -9,7 +9,7 @@ Ext.define('MicroEvents.model.Event', {
             { name: 'owner_id', type: 'auto' },
             { name: 'owner_name', type : 'auto'},
             { name: 'is_closed', type: 'boolean' },
-            { name: 'attendees_number', type: 'auto' },
+            { name: 'attendees_number', type: 'auto' }
         ]
     }
 });

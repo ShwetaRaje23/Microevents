@@ -110,7 +110,7 @@ Ext.define("MicroEvents.view.EventEditor", {
                     Ext.getCmp('eventTime').setValue(correctedTime)
                 
                     
-                },
+                }
             }
         });
 
@@ -125,7 +125,7 @@ Ext.define("MicroEvents.view.EventEditor", {
                 focus: function(t, e, eOpts) {
                     picker.show()
 
-                },
+                }
             }
         }
 

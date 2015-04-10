@@ -23,32 +23,41 @@ Ext.define('MicroEvents.view.Settings', {
         items: [
             {
                 docked: 'top',
-                xtype: 'titlebar',
-                title: 'Settings'
+                xtype: 'toolbar',
+                title: 'Settings',
+                items : [
+                    {
+                        xtype : 'spacer'
+                    },
+                    {
+                        xtype : 'button',
+                        text : 'Logout',
+                        iconCls: 'forbidden',
+                        action : 'logout'
+                    }
+                ]
             },
             {
                 xtype : 'container',
-                width  :'100%',
+                layout : 'auto',
+                // width  :'100%',
                 margin : '0 0 0 15',
-                height: '100%',
                 flex : 1,
                 id : 'settingsDetailPanel',
                 tpl : settingsDetailTpl
             },
             {
-                xtype : 'container',
-                
+                xtype : 'panel',
+                layout : 'fit',
                 styleHtmlContent: true,
                 style : 'background-color:#aaa;',
                 flex: 5,
                 items : [
                     {
-                        xtype : 'titlebar',
-                        margin : '-15 -15 -15 -15',
+                        xtype : 'toolbar',
                         title : 'My Circles',
-                        
+                        docked: 'top',
                         items : [
-                            {xtype : 'spacer'},
                             {
                                 xtype : 'button',
                                 iconCls: 'add',
@@ -56,6 +65,12 @@ Ext.define('MicroEvents.view.Settings', {
                                 ui : 'confirm'
                             }
                         ]
+                    },
+                    {
+                        xtype : 'list',
+                        id : 'myCirclesList',
+                        store : 'MyCircles',
+                        itemTpl : '{circle_name}'
                     }
                 ]
             }
