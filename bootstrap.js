@@ -684,12 +684,12 @@ Ext.ClassManager.addNameAlternateMappings({
   "MicroEvents.store.MyEvents": [],
   "MicroEvents.store.Settings": [],
   "MicroEvents.view.CircleEditor": [],
+  "MicroEvents.view.CircleListMultiSelect": [],
   "MicroEvents.view.EventEditor": [],
   "MicroEvents.view.Home": [],
   "MicroEvents.view.Login": [],
   "MicroEvents.view.Main": [],
   "MicroEvents.view.MyEvents": [],
-  "MicroEvents.view.NotesList": [],
   "MicroEvents.view.Register": [],
   "MicroEvents.view.Settings": [],
   "MicroEvents.view.Start": []
@@ -1443,6 +1443,9 @@ Ext.ClassManager.addNameAliasMappings({
   "MicroEvents.view.CircleEditor": [
     "widget.circleEditor"
   ],
+  "MicroEvents.view.CircleListMultiSelect": [
+    "widget.circleListMultiSelect"
+  ],
   "MicroEvents.view.EventEditor": [
     "widget.eventEditor"
   ],
@@ -1457,9 +1460,6 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "MicroEvents.view.MyEvents": [
     "widget.myevents"
-  ],
-  "MicroEvents.view.NotesList": [
-    "widget.noteslist"
   ],
   "MicroEvents.view.Register": [
     "widget.register"

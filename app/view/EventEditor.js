@@ -134,7 +134,7 @@ Ext.define("MicroEvents.view.EventEditor", {
             name: 'attendees_number',
             stepValue: 1,
             minValue: 1,
-            label: 'No. of Invitees'
+            label: 'Limit Invitees'
         }
 
         var venue = {
@@ -146,7 +146,23 @@ Ext.define("MicroEvents.view.EventEditor", {
 
         var map = {
             xtype : 'map',
-            useCurrentLocation : true
+            useCurrentLocation : true,
+            height : '40%'
+        }
+
+        var shareListText = {
+            xtype : 'textareafield',
+            id : 'shareListText',
+            label: 'Share Event',
+            name : 'shareListTextShow'
+        }
+
+        var invitesHidden = {
+            xtype : 'textfield',
+            id : 'invitesHidden',
+            label: 'Share Event',
+            name : 'invites',
+            hidden : true
         }
 
 
@@ -160,7 +176,9 @@ Ext.define("MicroEvents.view.EventEditor", {
                     venue,
                     eventDate,
                     eventTime,
-                    attendees_number
+                    attendees_number,
+                    shareListText,
+                    invitesHidden
                 ]
             }
         ]);
