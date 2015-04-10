@@ -39,7 +39,7 @@ Ext.define('MicroEvents.view.Settings', {
                 xtype : 'container',
                 
                 styleHtmlContent: true,
-                style : 'background-color:#aaa;',
+                // style : 'background-color:#aaa;',
                 flex: 5,
                 items : [
                     {
