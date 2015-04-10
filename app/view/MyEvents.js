@@ -1,3 +1,9 @@
+myEventsTpl = new Ext.XTemplate(
+    '<p><font size=3><b>{event_name}</b></font>',
+        '<p><font size=2>@{venue}</font></p>',  // use current array index to autonumber
+    '</p>'
+);
+
 Ext.define('MicroEvents.view.MyEvents', {
     extend: 'Ext.Panel',
     xtype: 'myevents',
@@ -8,8 +14,6 @@ Ext.define('MicroEvents.view.MyEvents', {
     config: {
         title: 'My Events',
         iconCls: 'user',
-        // styleHtmlContent: true,
-        
         items: [
             {
                 docked: 'top',
@@ -27,10 +31,11 @@ Ext.define('MicroEvents.view.MyEvents', {
             },
             {
                 xtype : 'list',
+                id : 'myEventsList',
                 height : '100%',
                 width: '100%',
                 store : 'MyEvents',
-                itemTpl : '{title}'
+                itemTpl : myEventsTpl
             }
         ]
     }

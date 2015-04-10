@@ -18,20 +18,11 @@ Ext.application({
     ],
 
     models : [
-
         'Event', 'Settings'
-        
-    ],
-
-    stores : [ 
-        'Events', 'Settings'
-
-
     ],
 
     stores : [ 
         'AllEvents', 'Settings', 'MyEvents'
-
     ],
 
     controllers: [
@@ -39,7 +30,7 @@ Ext.application({
     ],
 
     views: [
-        'Home', 'Start', 'Main', 'Login', 'Register', 'Settings', 'MyEvents', 'EventEditor', 'EventsListContainer'
+        'Home', 'Start', 'Main', 'Login', 'Register', 'Settings', 'MyEvents', 'EventEditor'
     ],
 
     icon: {
@@ -61,17 +52,9 @@ Ext.application({
     },
 
     launch: function() {
-        // Destroy the #appLoadingIndicator element
-        
-        // var eventsListContainer = {
-        //     xtype: "home"
-        // };
-        // var eventEditor = {
-        //     xtype: "eventeditor"
-        // };
 
         //Ext.Viewport.add([eventEditor]);
-        //Ext.fly('appLoadingIndicator').destroy();
+        Ext.fly('appLoadingIndicator').destroy();
 
         // Initialize the main view
         Ext.Viewport.add(Ext.create('MicroEvents.view.Start'));

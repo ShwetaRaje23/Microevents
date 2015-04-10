@@ -27,11 +27,17 @@ Ext.define('MicroEvents.controller.Login', {
         settingsURL = "http://127.0.0.1:8000/api/user/"+user_id+"/"
         Ext.getStore('Settings').getProxy().setUrl(settingsURL);
         Ext.getStore('Settings').load(); 
+        console.log(settingsURL)
 
-        myEventsURL = "http://127.0.0.1:8000/api/user/"+user_id+"/"
-        console.log(myEventsURL)
+        myEventsURL = "http://127.0.0.1:8000/api/user/"+user_id+"/events/"
         Ext.getStore('MyEvents').getProxy().setUrl(myEventsURL);
         Ext.getStore('MyEvents').load();             
+        console.log(myEventsURL)
+
+        allEventsURL = "http://127.0.0.1:8000/api/main/?user_id="+user_id
+        Ext.getStore('AllEvents').getProxy().setUrl(allEventsURL);
+        Ext.getStore('AllEvents').load();             
+        console.log(allEventsURL)
     },
 
     doLogin: function(){

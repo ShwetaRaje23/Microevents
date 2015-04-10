@@ -3,14 +3,14 @@ Ext.define('MicroEvents.model.Event', {
     
     config: {
         fields: [
-            { name: 'eid', type: 'auto' },
-            { name: 'title', type: 'auto' },
+            { name: 'event_id', type: 'auto' },
+            { name: 'event_name', type: 'auto' },
             { name: 'venue', type: 'auto' },
-            { name: 'date', type: 'auto' },
-            { name: 'time', type: 'auto' },
+            { name: 'date_time', type: 'auto' },
             { name: 'owner_id', type: 'auto' },
-            { name: 'circle_id', type: 'auto' },
-            { name: 'is_closed', type: 'boolean' }
+            { name: 'owner_name', type : 'auto'},
+            { name: 'is_closed', type: 'boolean' },
+            { name: 'attendees_number', type: 'auto' },
         ]
     }
 });

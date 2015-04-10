@@ -674,14 +674,13 @@ Ext.ClassManager.addNameAlternateMappings({
   "MicroEvents.controller.Main": [],
   "MicroEvents.controller.MyEvents": [],
   "MicroEvents.controller.Register": [],
+  "MicroEvents.model.Circle": [],
   "MicroEvents.model.Event": [],
-  "MicroEvents.model.Note": [],
   "MicroEvents.model.Settings": [],
-  "MicroEvents.store.Events": [],
-  "MicroEvents.store.Notes": [],
+  "MicroEvents.store.AllEvents": [],
+  "MicroEvents.store.MyEvents": [],
   "MicroEvents.store.Settings": [],
   "MicroEvents.view.EventEditor": [],
-  "MicroEvents.view.EventsListContainer": [],
   "MicroEvents.view.Home": [],
   "MicroEvents.view.Login": [],
   "MicroEvents.view.Main": [],
@@ -1428,17 +1427,14 @@ Ext.ClassManager.addNameAliasMappings({
   "MicroEvents.controller.Main": [],
   "MicroEvents.controller.MyEvents": [],
   "MicroEvents.controller.Register": [],
+  "MicroEvents.model.Circle": [],
   "MicroEvents.model.Event": [],
-  "MicroEvents.model.Note": [],
   "MicroEvents.model.Settings": [],
-  "MicroEvents.store.Events": [],
-  "MicroEvents.store.Notes": [],
+  "MicroEvents.store.AllEvents": [],
+  "MicroEvents.store.MyEvents": [],
   "MicroEvents.store.Settings": [],
   "MicroEvents.view.EventEditor": [
-    "widget.eventeditor"
-  ],
-  "MicroEvents.view.EventsListContainer": [
-    "widget.eventslistcontainer"
+    "widget.eventEditor"
   ],
   "MicroEvents.view.Home": [
     "widget.home"

@@ -38,6 +38,10 @@ Ext.define('MicroEvents.controller.EventEditor', {
         Ext.Ajax.request({
             url: "http://127.0.0.1:8000/api/event/",
             method : 'POST',
+            noCache: false,
+            pageParam: false,
+            startParam: false,
+            limitParam: false,
             params: {
                 event_name: newEventValues.title,
                 event_date_time: date,
