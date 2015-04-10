@@ -30,7 +30,7 @@ Ext.define('MicroEvents.controller.MyEvents', {
     },
 
     seeEventDetails: function(t, index, target, record, e, eOpts) {
-        setTimeout(function(){t.deselect(index);}, 500);
+        setTimeout(function(){t.deselect(index);}, 100);
     },
     
     //called when the Application is launched, remove if not needed

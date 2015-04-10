@@ -30,7 +30,7 @@ Ext.application({
     ],
 
     views: [
-        'Home', 'Start', 'Main', 'Login', 'Register', 'Settings', 'MyEvents', 'EventEditor', 'EventsListContainer', 'CircleEditor'
+        'Home', 'Start', 'Main', 'Login', 'Register', 'Settings', 'MyEvents', 'EventEditor', 'CircleEditor'
     ],
 
     icon: {
