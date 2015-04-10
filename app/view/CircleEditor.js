@@ -23,15 +23,17 @@ Ext.define("MicroEvents.view.CircleEditor", {
 
         var saveButton = {
             xtype: "button",
-            text: "Save",
+            id : 'ce_saveButton',
+            //text: "Save",
             action: "save",
             ui : 'action'
         };
 
         var topToolbar = {
             xtype: "toolbar",
+            id : 'circleEditor_toolbar',
             docked: "top",
-            title: "New Circle",
+            //title: "New Circle",
             items: [
                 backButton,
                 { xtype: "spacer" },
