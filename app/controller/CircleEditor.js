@@ -33,9 +33,6 @@ Ext.define('MicroEvents.controller.CircleEditor', {
         newCircleValues = Ext.getCmp('circleEditor').getValues()
         console.log(newCircleValues)
 
-        // var d = newCircleValues.date
-        // date = d.getFullYear() + '-' + d.getMonth() + '-' + d.getDate() + ' ' + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds()
-        //console.log(date)
         Ext.Ajax.request({
             url: "http://127.0.0.1:8000/api/circle/",
             method : 'POST',
@@ -51,10 +48,8 @@ Ext.define('MicroEvents.controller.CircleEditor', {
             },
             success: function(response){
                 console.log(response)
-                // temp = response
-                // localStorage.setItem("MicroEvents_user_id", JSON.parse(temp.responseText).user_id);
-                // localStorage.setItem("MicroEvents_email", JSON.parse(temp.responseText).email);
-                // this.loadStores(localStorage.getItem("MicroEvents_user_id"))
+                var newCircle = JSON.parse(response.responseText);
+                Ext.getStore("MyCircles").add(newCircle)
             }
         });
 
