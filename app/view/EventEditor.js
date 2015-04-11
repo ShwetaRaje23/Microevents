@@ -16,6 +16,7 @@ Ext.define("MicroEvents.view.EventEditor", {
 
         var backButton = {
             xtype: "button",
+            id : 'backButtonEventEditor',
             text: "Cancel",
             action: "back",
             ui : 'decline'
@@ -23,6 +24,7 @@ Ext.define("MicroEvents.view.EventEditor", {
 
         var saveButton = {
             xtype: "button",
+            id : 'saveButtonEventEditor',
             text: "Save",
             action: "save",
             ui : 'action'
@@ -52,6 +54,33 @@ Ext.define("MicroEvents.view.EventEditor", {
             id: 'eventEditor_desc',
             name: 'narrative',
             label: 'Description'
+        };
+
+        var botTool={
+            xtype: 'toolbar',
+            id : 'botToolbar',
+            hidden: true,
+            dock: 'bottom',
+            title: 'Respond to Invite',
+            items:[
+                {
+                    xtype:'button',
+                    text:'Not In',
+                    iconCls:'delete',
+                    action : 'rejectInvite'
+                },
+
+                {
+                    xtype: 'spacer'
+                },
+
+                {
+                    xtype:'button',
+                    action : 'acceptInvite',
+                    text:'I\'m In',
+                    iconCls:'check2'
+                }
+            ]
         };
 
         todaysDate = new Date();
@@ -180,7 +209,8 @@ Ext.define("MicroEvents.view.EventEditor", {
                     shareListText,
                     invitesHidden
                 ]
-            }
+            },
+            botTool
         ]);
     },
     onSaveButtonTap: function () {

@@ -31,7 +31,8 @@ Ext.define('MicroEvents.view.Home', {
                 listeners: {
                     disclose: { fn: this.onEventsListDisclose, scope: this }
                 }
-            }
+            },
+            
         ]
     }
     
