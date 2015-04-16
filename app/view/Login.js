@@ -23,7 +23,10 @@ Ext.define('MicroEvents.view.Login', {
                 flex: 1
             },
             {
-                html : '<h2><img src="resources/images/logo.png" alt="Im In" style="width:400px;height:250px"></img></h2>'
+                xtype : 'panel',
+                html : '<center><img src="resources/images/logo.png" alt="Im In"></img></center>',
+                width: '70%',
+                height: '40%'
             },
             {
                 xtype : 'formpanel',
@@ -36,7 +39,14 @@ Ext.define('MicroEvents.view.Login', {
                         xtype: 'emailfield',
                         name: 'email',
                         id : 'login_email',
-                        label: 'Email'
+                        label: 'Email',
+                        // listeners: {
+                        //     keyup: function(field, e){
+                        //         if(e.browserEvent.keyCode==13){
+                        //             MicroEvents.app.getController('Login').doLogin()
+                        //         }
+                        //     }
+                        // }
                     },
                     {
                         xtype: 'passwordfield',
