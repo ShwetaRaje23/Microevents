@@ -10,6 +10,7 @@ Ext.define('MicroEvents.view.Login', {
     config: {
         fullscreen: true,
         styleHtmlContent : true,
+        // style : 'background-color:#fff;'
 
         layout : {
             type : 'vbox',
@@ -22,11 +23,12 @@ Ext.define('MicroEvents.view.Login', {
                 flex: 1
             },
             {
-                html : '<h2><font color="4F0076">App Name Here</font></h2>'
+                html : '<h2><img src="resources/images/logo.png" alt="Im In" style="width:400px;height:250px"></img></h2>'
             },
             {
                 xtype : 'formpanel',
                 id : 'loginForm',
+                scrollable : false,
                 flex: 1,
                 width : '95%',
                 items: [

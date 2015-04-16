@@ -20,8 +20,8 @@ Ext.define('MicroEvents.controller.MyEvents', {
         
         Ext.getCmp('eventEditor_title').setValue("")
         Ext.getCmp('eventEditor_venue').setValue("")
-        Ext.getCmp('eventEditor_date').setValue("")
-        Ext.getCmp('eventTime').setValue("")
+        // Ext.getCmp('eventEditor_date').setValue("")
+        // Ext.getCmp('eventTime').setValue("")
         Ext.getCmp('shareListText').setValue("")
         this.showAddEventForm()
     },
@@ -76,31 +76,6 @@ Ext.define('MicroEvents.controller.MyEvents', {
         
 
     },
-
-    // showAddEventForm: function(){
-    //     console.log("Reached")
-    //     Ext.getCmp('start').getLayout().setAnimation({
-    //         type: 'slide',
-    //         duration: 300,
-    //         reverse: true,
-    //         direction:'down'
-    //     });
-
-    //     Ext.getCmp('start').setActiveItem(3, {type : 'slide', direction:'down'});
-
-    // },
-
-    // seeEventDetails: function(t, index, target, record, e, eOpts) {
-    //     setTimeout(function(){t.deselect(index);}, 100);
-    //     Ext.getCmp('start').getLayout().setAnimation({
-    //         type: 'slide',
-    //         duration: 300,
-    //         reverse: true,
-    //         direction:'down'
-    //     });
-    //     Ext.getCmp('start').setActiveItem(3, {type : 'slide', direction:'down'});
-        
-    // },
     
     //called when the Application is launched, remove if not needed
     launch: function(app) {

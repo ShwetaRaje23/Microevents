@@ -103,7 +103,7 @@ Ext.define('MicroEvents.controller.EventEditor', {
             },
             success: function(response){
                 console.log(response)
-                Ext.getStore('MyEvents').add(response.responseText);
+                Ext.getStore('MyEvents').add(JSON.parse(response.responseText));
             }
         });
 
